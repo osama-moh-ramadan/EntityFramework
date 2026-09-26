@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{8E90EBF1-3283-4454-B0AA-0AF67F32859E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigrationByConvention", "ConfigrationByConvention\ConfigrationByConvention.csproj", "{50A3325F-E358-4F09-A6EE-BB9D307A04BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8E90EBF1-3283-4454-B0AA-0AF67F32859E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E90EBF1-3283-4454-B0AA-0AF67F32859E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E90EBF1-3283-4454-B0AA-0AF67F32859E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A3325F-E358-4F09-A6EE-BB9D307A04BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A3325F-E358-4F09-A6EE-BB9D307A04BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A3325F-E358-4F09-A6EE-BB9D307A04BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A3325F-E358-4F09-A6EE-BB9D307A04BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
