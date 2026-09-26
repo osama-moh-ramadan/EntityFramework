@@ -13,9 +13,10 @@ public class AppDbContext:DbContext
     {
         base.OnConfiguring(optionsBuilder);
         var configr = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json")
+            .AddJsonFile("AppSettings.json")
             .Build();
         var connectionString = 
             configr.GetSection("ConnectionString").Value;
+        optionsBuilder.UseSqlServer(connectionString);
     }
 }
