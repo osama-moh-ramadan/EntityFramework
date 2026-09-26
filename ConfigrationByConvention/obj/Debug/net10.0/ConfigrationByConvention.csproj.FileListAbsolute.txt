@@ -1,0 +1,6 @@
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.csproj.AssemblyReference.cache
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.GeneratedMSBuildEditorConfig.editorconfig
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.AssemblyInfoInputs.cache
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.AssemblyInfo.cs
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.csproj.CoreCompileInputs.cache
+/home/osama/RiderProjects/EntityFramework/ConfigrationByConvention/obj/Debug/net10.0/ConfigrationByConvention.sourcelink.json

@@ -1,6 +1,6 @@
 namespace ConfigrationByConvention.Entities;
 
-public class Tweat
+public class Tweet
 {
     public int TweetId { get; set; }
     public int UserId { get; set; }
