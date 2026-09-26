@@ -2,6 +2,7 @@
  using Microsoft.Data.SqlClient;
  using Microsoft.EntityFrameworkCore;
  using Microsoft.Extensions.Configuration;
+ using Microsoft.Extensions.DependencyInjection;
 
  namespace EntityFramework;
 
@@ -50,18 +51,22 @@ class Program
          وبعد كده في بروبرتي هي readonly 
          var option = optionBuilder.Options;
              */
-        var optionsBuilder = new DbContextOptionsBuilder();
-        optionsBuilder.UseSqlServer(ConnectionString);
-        var options = optionsBuilder.Options;
-
-        using (var context = new AppDbContext(options))
-        {
-            foreach (var item in context.Wallets)
-            {
-                Console.WriteLine(item);
-            }
-        }
-        
+        /*
+         * هنا انا هعمل طريقة الDbcontext وظيفتها اني اقلل الاعتمادية قدر الامكان 
+         */
+        var services = new ServiceCollection();
+        services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(ConnectionString));
+           // بعد كده لازم استعديها من IservicesProvider في جواها method اسمها BuildServiceProvider
+          var serviceProvider = services.BuildServiceProvider();
+          // هنا بقى مع الاستخدام انا مش هعمل new من تاني عشان اقلل الاعتمادية 
+          using (var context = serviceProvider.GetService<AppDbContext>())
+          {
+              foreach (var item in context.Wallets)
+              {
+                  Console.WriteLine(item);
+              }
+          }
             Console.ReadKey();
     }
 }
