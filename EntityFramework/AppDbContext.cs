@@ -7,6 +7,7 @@ public class AppDbContext:DbContext
 {
     public DbSet<Wallet> Wallets { get; set; } = null !;
   // هنا كانت الطريقة الاولي اللي فيها بحط الconfigratino يكون Internal 
+  /*
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
@@ -22,15 +23,12 @@ public class AppDbContext:DbContext
         // وفي حالتنا دي انا بتعامل مع SQL server وهنا بقى اعطيله برده الConnectionString
         optionsBuilder.UseSqlServer(ConnectionString);
     }
+    */
     //هنا هنستخدم بقى الطريقة التانية اللي هي External وهستخدم فيها 
      // الكونستراكتور اللي فيه parameter 
      // هنبعتها لل base class (DbContext) 
      public AppDbContext(DbContextOptions options) : base(options)
      {
-         var configration = new ConfigurationBuilder()
-             .AddJsonFile("appsettings.json")
-             .Build();
-         var ConnectionString = configration
-             .GetSection("connectionstring").Value;
+        
      }
 }
