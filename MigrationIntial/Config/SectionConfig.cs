@@ -24,6 +24,14 @@ public class SectionConfig:IEntityTypeConfiguration<Section>
             .IsRequired(false);
         builder.ToTable("Sections");
         builder.HasData(SectionData());
+
+        builder.HasMany(x => x.Schedules)
+            .WithMany(x => x.Sections)
+            .UsingEntity<SectionSchedule>(); // to select join table 
+
+        builder.HasMany(c => c.Students)
+            .WithMany(x => x.Sections)
+            .UsingEntity<Enrollments>();
     }
 
     List<Section> SectionData()
