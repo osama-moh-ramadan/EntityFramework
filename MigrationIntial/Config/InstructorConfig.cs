@@ -16,18 +16,24 @@ public class InstructorConfig:IEntityTypeConfiguration<Instructor>
             .HasColumnType("VARCHAR").HasMaxLength(255).IsRequired();
         builder.Property(x=>x.Id).ValueGeneratedOnAdd();
         builder.HasData(InstructorData());
+        //The relationship with Office 
+        builder.HasOne(o => o.Office)
+            .WithOne(o => o.Instructor)
+            .HasForeignKey<Office>(o => o.Id)
+            .IsRequired(false);
     }
 
     private static List<Instructor> InstructorData()
     {
         return new List<Instructor>()
         {
-            new Instructor(){Id = 1,FName = "Ahmed" , LName = "Abdullah"},
-            new Instructor(){Id = 2,FName = "Yasmeen",LName="Mohammed"},
-            new Instructor(){Id = 3,FName = "Khalid",LName = "Hassan"},
-            new Instructor(){Id = 4,FName = "Nadia",LName = "Ali"},
-            new Instructor(){Id = 5,FName = "Omar",LName="Ibrahim"}
+            new Instructor(){Id = 1,FName = "Ahmed" , LName = "Abdullah",OfficeId = 1},
+            new Instructor(){Id = 2,FName = "Yasmeen",LName="Mohammed",OfficeId = 2},
+            new Instructor(){Id = 3,FName = "Khalid",LName = "Hassan",OfficeId = 3},
+            new Instructor(){Id = 4,FName = "Nadia",LName = "Ali",OfficeId = 4},
+            new Instructor(){Id = 5,FName = "Omar",LName="Ibrahim",OfficeId = 5}
             
         };
     }
 }
+

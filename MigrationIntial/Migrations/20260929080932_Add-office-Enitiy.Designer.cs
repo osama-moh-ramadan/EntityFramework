@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MigrationIntial.Data;
 
@@ -10,9 +11,11 @@ using MigrationIntial.Data;
 namespace MigrationIntial.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260929080932_Add-office-Enitiy")]
+    partial class AddofficeEnitiy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -188,113 +191,6 @@ namespace MigrationIntial.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MigrationIntial.Entities.Section", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("InstructorId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SectionName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("InstructorId");
-
-                    b.ToTable("Sections", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_MA1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_MA2"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_PH1"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_PH2"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_CH1"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_CH2"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_BI1"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_BI2"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_CS1"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_CS2"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CourseId = 1,
-                            InstructorId = 1,
-                            SectionName = "S_CS3"
-                        });
-                });
-
             modelBuilder.Entity("MigrationIntial.Entities.Office", b =>
                 {
                     b.HasOne("MigrationIntial.Entities.Instructor", "Instructor")
@@ -304,34 +200,10 @@ namespace MigrationIntial.Migrations
                     b.Navigation("Instructor");
                 });
 
-            modelBuilder.Entity("MigrationIntial.Entities.Section", b =>
-                {
-                    b.HasOne("MigrationIntial.Entities.Course", "Course")
-                        .WithMany("Sections")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MigrationIntial.Entities.Instructor", "Instructor")
-                        .WithMany("Sections")
-                        .HasForeignKey("InstructorId");
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Instructor");
-                });
-
-            modelBuilder.Entity("MigrationIntial.Entities.Course", b =>
-                {
-                    b.Navigation("Sections");
-                });
-
             modelBuilder.Entity("MigrationIntial.Entities.Instructor", b =>
                 {
                     b.Navigation("Office")
                         .IsRequired();
-
-                    b.Navigation("Sections");
                 });
 #pragma warning restore 612, 618
         }
