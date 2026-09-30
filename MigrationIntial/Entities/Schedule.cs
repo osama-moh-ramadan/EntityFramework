@@ -13,7 +13,5 @@ public class Schedule
     public bool SAT { get; set; }
     // Relationships is Many to many
     public ICollection<Section> Sections { get; set; } = new List<Section>();
-    public ICollection<SectionSchedule> SectionSchedules{ get; set; } = new List<SectionSchedule>();
-
 
 }

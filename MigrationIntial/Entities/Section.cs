@@ -1,3 +1,5 @@
+using System.Security.AccessControl;
+
 namespace MigrationIntial.Entities;
 
 public class Section
@@ -8,7 +10,9 @@ public class Section
     public Course Course { get; set; }
     public int? InstructorId { get; set; } // this relationship is optional
     public Instructor? Instructor { get; set; }
-    public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
+    public int  ScheduleId { get; set; }
+    public Schedule Schedule { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
     public ICollection<Student> Students { get; set; } = new List<Student>();
-    public ICollection<SectionSchedule> SectionSchedules{ get; set; } = new List<SectionSchedule>();
 }
