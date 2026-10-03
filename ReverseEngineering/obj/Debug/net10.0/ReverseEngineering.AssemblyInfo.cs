@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReverseEngineering")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75d0c15dd5f11d11d5942d2fe0f0c7c6f6b08c74")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d3f3bc4a8a5e681312c30163a1e83567ff4e90d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReverseEngineering")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReverseEngineering")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

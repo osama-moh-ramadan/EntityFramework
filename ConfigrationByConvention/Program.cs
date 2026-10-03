@@ -18,7 +18,7 @@ class Program
             Console.WriteLine();
             Console.WriteLine("-------- Tweets -----------");
             Console.WriteLine();
-            foreach (var tweet in context.Tweet)
+            foreach (var tweet in context.Tweats)
             {
                 Console.WriteLine(tweet.TweetText);
             }

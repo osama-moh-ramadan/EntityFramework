@@ -411,7 +411,7 @@ namespace MigrationIntial.Migrations
                             Id = 2,
                             CourseId = 1,
                             EndTime = new TimeSpan(0, 18, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 2,
                             ScheduleId = 3,
                             SectionName = "S_MA2",
                             StartTime = new TimeSpan(0, 14, 0, 0, 0)
@@ -419,7 +419,7 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 3,
-                            CourseId = 1,
+                            CourseId = 2,
                             EndTime = new TimeSpan(0, 15, 0, 0, 0),
                             InstructorId = 1,
                             ScheduleId = 4,
@@ -429,9 +429,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 4,
-                            CourseId = 1,
+                            CourseId = 2,
                             EndTime = new TimeSpan(0, 12, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 3,
                             ScheduleId = 1,
                             SectionName = "S_PH2",
                             StartTime = new TimeSpan(0, 10, 0, 0, 0)
@@ -439,9 +439,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 5,
-                            CourseId = 1,
+                            CourseId = 3,
                             EndTime = new TimeSpan(0, 18, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 2,
                             ScheduleId = 1,
                             SectionName = "S_CH1",
                             StartTime = new TimeSpan(0, 16, 0, 0, 0)
@@ -449,9 +449,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 6,
-                            CourseId = 1,
+                            CourseId = 3,
                             EndTime = new TimeSpan(0, 10, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 3,
                             ScheduleId = 2,
                             SectionName = "S_CH2",
                             StartTime = new TimeSpan(0, 8, 0, 0, 0)
@@ -459,9 +459,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 7,
-                            CourseId = 1,
+                            CourseId = 4,
                             EndTime = new TimeSpan(0, 14, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 4,
                             ScheduleId = 3,
                             SectionName = "S_BI1",
                             StartTime = new TimeSpan(0, 11, 0, 0, 0)
@@ -469,9 +469,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 8,
-                            CourseId = 1,
+                            CourseId = 4,
                             EndTime = new TimeSpan(0, 14, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 5,
                             ScheduleId = 4,
                             SectionName = "S_BI2",
                             StartTime = new TimeSpan(0, 10, 0, 0, 0)
@@ -479,9 +479,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 9,
-                            CourseId = 1,
+                            CourseId = 5,
                             EndTime = new TimeSpan(0, 18, 0, 0, 0),
-                            InstructorId = 1,
+                            InstructorId = 4,
                             ScheduleId = 4,
                             SectionName = "S_CS1",
                             StartTime = new TimeSpan(0, 16, 0, 0, 0)
@@ -489,9 +489,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 10,
-                            CourseId = 1,
+                            CourseId = 5,
                             EndTime = new TimeSpan(0, 15, 0, 0, 0),
-                            InstructorId = 10,
+                            InstructorId = 5,
                             ScheduleId = 3,
                             SectionName = "S_CS2",
                             StartTime = new TimeSpan(0, 12, 0, 0, 0)
@@ -499,9 +499,9 @@ namespace MigrationIntial.Migrations
                         new
                         {
                             Id = 11,
-                            CourseId = 1,
+                            CourseId = 5,
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
-                            InstructorId = 11,
+                            InstructorId = 4,
                             ScheduleId = 5,
                             SectionName = "S_CS3",
                             StartTime = new TimeSpan(0, 9, 0, 0, 0)

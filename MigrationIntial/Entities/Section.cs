@@ -14,5 +14,5 @@ public class Section
     public Schedule Schedule { get; set; }
     public TimeSpan StartTime { get; set; }
     public TimeSpan EndTime { get; set; }
-    public ICollection<Student> Students { get; set; } = new List<Student>();
+    public ICollection<Particpant> Particpants { get; set; } = new List<Particpant>();
 }
