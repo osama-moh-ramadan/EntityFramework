@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationIntial", "Migratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateDropAPI", "CreateDropAPI\CreateDropAPI.csproj", "{DC55701B-97B2-4D7C-A742-8AD06B13406D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryData-1", "QueryData-1\QueryData-1.csproj", "{2B97831A-1FF8-48C7-A7B4-CA038D6A0076}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{DC55701B-97B2-4D7C-A742-8AD06B13406D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC55701B-97B2-4D7C-A742-8AD06B13406D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC55701B-97B2-4D7C-A742-8AD06B13406D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B97831A-1FF8-48C7-A7B4-CA038D6A0076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B97831A-1FF8-48C7-A7B4-CA038D6A0076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B97831A-1FF8-48C7-A7B4-CA038D6A0076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B97831A-1FF8-48C7-A7B4-CA038D6A0076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
