@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ReverseEngineering;
 
-public partial class AppDbContext : DbContext
+public partial class  AppDbContext : DbContext
 {
     public AppDbContext()
     {
